@@ -1,0 +1,300 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700&display=swap");
+:root {
+  --primary: #393e3e;
+  --secondary: #145c72;
+  --secondary-light: #00a0d1;
+}
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+html {
+    font-size: 62.5%;
+    font-family: "Poppins", sans-serif;
+}
+body{
+    font-size: 1.6rem;
+
+}
+.background{
+    background-image:url(img/background.png);
+    height: 100vh;
+    background-repeat: no-repeat;
+    background-size: cover;
+    
+}
+.container{
+    width:50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction:column;
+    height: 100vh;
+    position: absolute;
+    top:0;
+    left: 0;
+    gap: 4rem;
+}
+.box{
+    width: 90%;
+    height: 450px;
+    background-color: var(--primary);
+    border: 5px solid var(--secondary);
+    box-shadow: 0 4px 4px 4px rgba(0,0,0,0.25);
+    border-radius: 2rem;
+}
+.content{
+    color: var(--primary);
+    text-align: center;
+}
+.content h2{
+  font-size: 6.4rem;
+  font-weight: 500;
+  line-height: 80%;
+}
+.content h1{
+  font-size: 9.4rem;
+  font-weight: 600;
+  line-height: 90%;
+}
+.calculate-form{
+   display: grid;
+   grid-template-columns:repeat(2,1fr);
+   gap:5rem;
+   padding: 5rem;
+   place-content: center;
+
+}
+input{
+    height: 4.4rem;
+    padding:4px  12px;
+    border-radius: 0.5px;
+    background-color: transparent;
+    border: 1px solid white;
+    color: white;
+    font-size: 1.6rem;
+    max-width: 40rem;
+}
+input::placeholder{
+    color: white;
+    font-size: 1.6rem;
+
+}
+input:focus-visible{
+    outline: var(--secondary);
+    border:2px solid var(--secondary);
+}
+.primary-btn{
+    font-size: 2.4rem;
+    width:16rem;
+    border-radius: 1rem;
+    padding: 1rem 2rem;
+    background: var(--secondary);
+    color: white;
+    border: none;
+    cursor: pointer;
+}
+.primary-btn:hover{
+    opacity: 0.9;
+}
+.primary-btn:active{
+    opacity: 1;
+    background:var(--secondary-light);
+}
+
+/* this is code for p result tage */
+#result{
+    color: white;
+    text-align: center;
+    font-size: 20px;
+    margin-bottom: 20px;
+}
+
+
+/* Reponsive code */
+
+@media(min-width:974px)
+{
+    .content h2{
+        margin-top: 20px;
+        font-size: 5.8rem;
+        font-weight: 500;
+        line-height: 50%;
+        text-align:left;
+        margin-left: 15px;
+
+      }
+      .content h1{
+        font-size: 9rem;
+        margin-top: 15px;
+        text-align:left;
+        margin-left: 15px;
+
+      }
+}
+@media(max-width:1150px){
+     input{
+        width: 20rem;
+     }
+}
+
+@media(max-width:1050px){
+    .calculate-form{
+        display: grid;
+        grid-template-columns:repeat(1,1fr);
+        gap:1rem;
+        padding: 5rem;
+        place-content: center;
+     
+     }
+     input{
+        width: 40rem;
+     }
+}
+
+@media(max-width:975px){
+    .calculate-form{
+        display: grid;
+        gap:1rem;
+     
+     }
+     input{
+        width:100%;
+     }
+     .box{
+        width:75%;
+     }
+     .container{
+        width:70%;
+        
+    }
+    
+}
+@media(max-width:800px){
+    .calculate-form{
+        display: grid;
+        gap:1rem;
+     
+     }
+     input{
+        width:100%;
+     }
+     .box{
+        width:75%;
+     }
+     .container{
+        width:80%;
+        
+    }
+}
+@media(max-width:680px){
+    .calculate-form{
+        display: grid;
+        gap:1rem;
+     
+     }
+     input{
+        width:100%;
+     }
+     .box{
+        width:75%;
+     }
+     .container{
+        width:90%;
+        
+    }
+}
+@media(max-width:600px){
+    .calculate-form{
+        display: grid;
+        gap:1rem;
+     
+     }
+     input{
+        width:100%;
+     }
+     .box{
+        width:75%;
+
+     }
+     .container{
+        width:100%;
+        
+        
+    }
+}
+@media(max-width:550px){
+    .container{
+        width:100%;
+        /* width:50%; */
+        display: block;
+        padding:20px;
+        max-height:200px;
+         
+    }
+    input{
+        width:400px;
+    }
+    .box{
+        width:100%;
+        
+
+     }
+     .content h2{
+        margin-top: 20px;
+        font-size: 3rem;
+        font-weight: 500;
+        line-height: 60%;
+        text-align:left;
+
+      }
+      .content h1{
+        font-size: 4rem;
+        margin-top: 15px;
+        text-align:left;
+      }
+  
+}
+
+
+@media(min-width:280px) and (max-width:450px){
+    .container{
+        width:100%;
+        /* width:50%; */
+        display: block;
+        padding:12px;
+        max-height:200px;
+         
+    }
+    input{
+        width:250px;
+    }
+    .box{
+        width:100%;
+        
+
+     }
+     .primary-btn{
+        font-size: 2.2rem;
+        width:14rem;
+        padding:4px 10px;
+    }
+
+
+    .content h2{
+        margin-top: 20px;
+        font-size: 3rem;
+        font-weight: 500;
+        line-height: 60%;
+        text-align:left;
+
+      }
+      .content h1{
+        font-size: 4rem;
+        margin-top: 15px;
+        text-align:left;
+      }
+}
+
+
